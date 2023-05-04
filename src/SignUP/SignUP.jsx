@@ -28,10 +28,9 @@ export default function SignUP() {
                     <View style={{
                         justifyContent: "center",
                         alignItems: "center",
+                        marginTop:windowHeight/3.7
                     }}>
                         <View style={styles.container}>
-                            {/* <Image style={styles.image} source={require("./assets/log2.png")} />  */}
-                            {/* <StatusBar style="auto" /> */}
                             <View style={styles.inputView}>
                                 <TextInput
                                     style={styles.TextInput}

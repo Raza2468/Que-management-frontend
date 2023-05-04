@@ -14,14 +14,17 @@ function Header() {
         //     start={{ x: 0, y: 0.5 }}
         //     end={{ x: 1, y: 0.5 }}
         // >
-        <SafeAreaView style={{flex:1}}>
-            <View style={{ backgroundColor: "#1D7874", width: "100%", height: "23%" }}>
-                <Text style={{ color: "white", fontSize: 25, marginLeft: "4%" }}> Registration</Text>
+        <View style={{ position: 'absolute', left: 0, right: 0, zIndex: 1 }}>
+            <View style={{ backgroundColor: "#1D7874", width: "100%", height: "100%", zIndex: 1 }}>
+                <Text style={{ color: "white", fontSize: 25, marginLeft: "4%" }}> List</Text>
             </View>
-            <View style={{ backgroundColor: "#679289", opacity: 0.5, borderBottomEndRadius: 20, borderBottomStartRadius: 20, height: "28%" }}>
+            <View style={{
+                backgroundColor: "#1D7874", opacity: 0.5, borderBottomEndRadius: 20, borderBottomStartRadius: 20, height: "120%", borderColor: "yellow",
+                borderBottomWidth: 5,
+            }}>
                 <Text>Second Header</Text>
             </View>
-        </SafeAreaView>
+        </View>
         // </LinearGradient>
         // </View>
     )

@@ -11,15 +11,17 @@ import {
 import SignIn from './src/SignIn/SignIn';
 import SignUP from './src/SignUP/SignUP';
 import List from './src/List/List';
+import UserHome from './src/UserHome/UserHome';
 
 // import Header from './src/Header/Header';
 
 function App() {
   return (
     <>
+    <UserHome />
     {/* <SignIn /> */}
     {/* <SignUP /> */}
-    <List />
+    {/* <List /> */}
     
     </>
   );

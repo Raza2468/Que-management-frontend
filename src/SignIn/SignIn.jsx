@@ -28,6 +28,7 @@ export default function App() {
                     <View style={{
                         justifyContent: "center",
                         alignItems: "center",
+                        marginTop: windowHeight/3.7
                     }}>
                         <View style={styles.container}>
                             {/* <Image style={styles.image} source={require("./assets/log2.png")} />  */}
@@ -95,8 +96,8 @@ const styles = StyleSheet.create({
         marginBottom: 25,
         alignItems: "center",
         borderColor:"#1D7874",
+        borderWidth:5,
         height: 60,
-        borderWidth:5
     },
     TextInput: {
         height: 50,

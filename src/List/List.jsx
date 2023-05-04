@@ -22,40 +22,35 @@ export default function List() {
             >
 
                 <Header />
-                <ScrollView >
-                    <View style={{
-                        justifyContent: "center",
-                        alignItems: "center",
-                    }}>
-                        <View
-                        style={styles.container}
-                        >
-                            <View style={{
-                                display: "flex", flexDirection: "row", 
-                                width: windowWidth / 1.2, backgroundColor: "yellow", height: 60,
-                                borderColor: "#1D7874",
-                                borderWidth: 5,
-                                borderRadius: 20,
-                                justifyContent: "space-around"
-                            }}>
-                                <Text style={{ fontSize: 20 }}>Sajjid</Text>
-                                <View style={{ display: "flex", flexDirection: "row" }}>
-                                    <Text style={{ fontSize: 20, backgroundColor: "red" }}>05</Text>
-                                    <Text style={{ fontSize: 20, backgroundColor: "green", width: 50 }}>04</Text></View>
-                                {/* <View><Text>04</Text></View> */}
+                <ScrollView>
+                    <View style={{marginTop: windowHeight/6.3 }}>
+                        <View style={{ flex: 1, flexDirection: "row", justifyContent: "space-around" }}>
+                            <View style={styles.twoNumberBox}>
+                                <Text style={{ fontSize: 25, color: "red", textAlign: "center", marginTop: 10 }}>04</Text>
                             </View>
-                            {/* <Image style={styles.image} source={require("./assets/log2.png")} />  */}
-                            {/* <StatusBar style="auto" /> */}
-                            {/* <View style={styles.inputView}>
-                                <TextInput
-                                    style={styles.TextInput}
-                                    placeholder="Name."
-                                    placeholderTextColor="#003f5c"
-                                    onChangeText={(name) => setEmail(name)}
-                                />
-                            </View> */}
-
+                            <View style={styles.twoNumberBox}>
+                                <Text style={{ fontSize: 25, color: "red", textAlign: "center", marginTop: 10 }}>05</Text>
+                            </View>
                         </View>
+
+                        <View style={styles.container}>
+                            <Text style={{ fontSize: 25, color: "white" }}>Ahmed Raza</Text>
+                            <View style={{ flex: 1, flexDirection: "row", justifyContent: "flex-end" }}>
+                                <View style={styles.numberBox}>
+                                    <Text style={{ fontSize: 25, color: "red", textAlign: "center", marginTop: 10 }}>04</Text>
+                                </View>
+                                <View style={styles.numberBox}>
+                                    <Text style={{ fontSize: 25, color: "red", textAlign: "center", marginTop: 10 }}>05</Text>
+                                </View>
+                            </View>
+                        </View>
+                        <View style={styles.container}></View>
+                        <View style={styles.container}></View>
+                        <View style={styles.container}></View>
+                        <View style={styles.container}></View>
+                        <View style={styles.container}></View>
+                        <View style={styles.container}></View>
+                        <View style={styles.container}></View>
                     </View>
                 </ScrollView>
             </LinearGradient>
@@ -64,49 +59,37 @@ export default function List() {
 }
 const styles = StyleSheet.create({
     container: {
-        // flex: 1,
+        flex: 1,
+        flexDirection: "row",
         backgroundColor: "#679289",
         justifyContent: "center",
         alignItems: "center",
-        height: windowHeight / 2,
-        width: windowWidth / 1.2,
+        height: windowHeight / 7,
         borderRadius: 30,
-        // marginTop: "20%",
-        // margin:10,
-        // padding:10
+        marginTop: "4%",
+        borderColor: "yellow",
+        borderWidth: 5,
+        // width: windowWidth - 6,
+        margin: 10,
+        padding: 10
     },
-    image: {
-        // marginTop:10,
-        // marginBottom: 40,
+    numberBox: {
+        width: 56,
+        height: 56,
+        elevation: 2,
+        borderRadius: 28,
+        marginBottom: 3,
+        backgroundColor: 'white',
+        margin: 10,
     },
-    inputView: {
-        backgroundColor: "#FFFFFF",
-        borderRadius: 30,
-        width: "85%",
-        height: 50,
-        marginBottom: 25,
-        alignItems: "center",
-        height: 60,
-        borderColor: "#1D7874",
-        borderWidth: 5
-    },
-    TextInput: {
-        height: 50,
-        flex: 1,
-        padding: 10,
-        marginLeft: 20,
-    },
-    forgot_button: {
-        height: 30,
-        // marginBottom: 30,
-    },
-    loginBtn: {
-        width: "40%",
-        borderRadius: 25,
-        height: 50,
-        alignItems: "center",
-        justifyContent: "center",
-        // marginTop: 40,
-        backgroundColor: "#00CBA0",
-    },
+    twoNumberBox: {
+        width: 56,
+        height: 56,
+        elevation: 2,
+        marginBottom: 3,
+        backgroundColor: 'white',
+        borderBottomEndRadius: 15,
+        borderBottomStartRadius: 15,
+    }
 });
+
