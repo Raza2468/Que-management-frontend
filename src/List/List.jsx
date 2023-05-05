@@ -23,7 +23,7 @@ export default function List() {
 
                 <Header />
                 <ScrollView>
-                    <View style={{marginTop: windowHeight/6.3 }}>
+                    <View style={{marginTop: windowHeight/5.6 }}>
                         <View style={{ flex: 1, flexDirection: "row", justifyContent: "space-around" }}>
                             <View style={styles.twoNumberBox}>
                                 <Text style={{ fontSize: 25, color: "red", textAlign: "center", marginTop: 10 }}>04</Text>

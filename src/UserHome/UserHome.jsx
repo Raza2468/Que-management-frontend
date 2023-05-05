@@ -24,7 +24,7 @@ export default function UserHome() {
                 end={{ x: 1, y: 0.5 }}
             >
 
-                <Header />
+                <Header ScreenName="User Home"/>
                 <ScrollView>
                     <View style={{ marginTop: windowHeight/5, justifyContent: "center", alignItems: "center" }}>
 

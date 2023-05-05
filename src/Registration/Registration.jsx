@@ -9,7 +9,7 @@ import Header from "../Header/Header";
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
 
-export default function App() {
+export default function Registration() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     return (
@@ -23,7 +23,7 @@ export default function App() {
                 end={{ x: 1, y: 0.5 }}
             >
 
-                <Header ScreenName="Sign IN"/>
+                <Header ScreenName="Registration" />
                 <ScrollView >
                     <View style={{
                         justifyContent: "center",
@@ -31,8 +31,6 @@ export default function App() {
                         marginTop: windowHeight / 3.7
                     }}>
                         <View style={styles.container}>
-                            {/* <Image style={styles.image} source={require("./assets/log2.png")} />  */}
-                            {/* <StatusBar style="auto" /> */}
                             <View style={styles.inputView}>
                                 <TextInput
                                     style={styles.TextInput}
@@ -44,7 +42,15 @@ export default function App() {
                             <View style={styles.inputView}>
                                 <TextInput
                                     style={styles.TextInput}
-                                    placeholder="Cell."
+                                    placeholder="NTN."
+                                    placeholderTextColor="#003f5c"
+                                    onChangeText={(name) => setEmail(name)}
+                                />
+                            </View>
+                            <View style={styles.inputView}>
+                                <TextInput
+                                    style={styles.TextInput}
+                                    placeholder="User ID"
                                     placeholderTextColor="#003f5c"
                                     onChangeText={(email) => setEmail(email)}
                                 />
@@ -59,10 +65,10 @@ export default function App() {
                                 />
                             </View>
                             <TouchableOpacity>
-                                <Text style={styles.forgot_button}>Forgot Password?</Text>
+                                {/* <Text style={styles.forgot_button}>Forgot Password?</Text> */}
                             </TouchableOpacity>
                             <TouchableOpacity style={styles.loginBtn}>
-                                <Text style={{ fontSize: 30, color: "white" }}>Next</Text>
+                                <Text style={styles.loginText}>Next</Text>
                             </TouchableOpacity>
                         </View>
                     </View>
@@ -92,19 +98,18 @@ const styles = StyleSheet.create({
         backgroundColor: "#FFFFFF",
         borderRadius: 30,
         width: "85%",
-        height: 50,
-        marginBottom: 25,
+        marginBottom: 17,
         alignItems: "center",
         borderColor: "#1D7874",
-        borderWidth: 5,
         height: 60,
+        borderWidth: 5
     },
     TextInput: {
-        flex: 1,
         height: 50,
-        fontSize: 22,
+        flex: 1,
         padding: 10,
         // marginLeft: 20,
+        fontSize:22
     },
     forgot_button: {
         height: 30,

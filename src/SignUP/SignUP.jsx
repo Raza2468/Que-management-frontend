@@ -23,18 +23,18 @@ export default function SignUP() {
                 end={{ x: 1, y: 0.5 }}
             >
 
-                <Header />
+                <Header ScreenName="Sign Up"/>
                 <ScrollView >
                     <View style={{
                         justifyContent: "center",
                         alignItems: "center",
-                        marginTop:windowHeight/3.7
+                        marginTop:windowHeight/4
                     }}>
                         <View style={styles.container}>
                             <View style={styles.inputView}>
                                 <TextInput
                                     style={styles.TextInput}
-                                    placeholder="Name."
+                                    placeholder="First Name"
                                     placeholderTextColor="#003f5c"
                                     onChangeText={(name) => setEmail(name)}
                                 />
@@ -42,7 +42,7 @@ export default function SignUP() {
                             <View style={styles.inputView}>
                                 <TextInput
                                     style={styles.TextInput}
-                                    placeholder="NTN."
+                                    placeholder="Last Name"
                                     placeholderTextColor="#003f5c"
                                     onChangeText={(name) => setEmail(name)}
                                 />
@@ -50,7 +50,15 @@ export default function SignUP() {
                             <View style={styles.inputView}>
                                 <TextInput
                                     style={styles.TextInput}
-                                    placeholder="Email."
+                                    placeholder="Cell No"
+                                    placeholderTextColor="#003f5c"
+                                    onChangeText={(email) => setEmail(email)}
+                                />
+                            </View>
+                            <View style={styles.inputView}>
+                                <TextInput
+                                    style={styles.TextInput}
+                                    placeholder="Email"
                                     placeholderTextColor="#003f5c"
                                     onChangeText={(email) => setEmail(email)}
                                 />
@@ -68,7 +76,7 @@ export default function SignUP() {
                                 {/* <Text style={styles.forgot_button}>Forgot Password?</Text> */}
                             </TouchableOpacity>
                             <TouchableOpacity style={styles.loginBtn}>
-                                <Text style={styles.loginText}>Next</Text>
+                            <Text style={{ fontSize: 30,color:"white" }}>Next</Text>
                             </TouchableOpacity>
                         </View>
                     </View>
@@ -83,7 +91,7 @@ const styles = StyleSheet.create({
         backgroundColor: "#679289",
         justifyContent: "center",
         alignItems: "center",
-        height: windowHeight / 2,
+        height: windowHeight / 1.5,
         width: windowWidth / 1.2,
         borderRadius: 30,
         // marginTop: "20%",
@@ -105,10 +113,11 @@ const styles = StyleSheet.create({
         borderWidth:5
     },
     TextInput: {
-        height: 50,
         flex: 1,
+        height: 50,
+        fontSize:22,
         padding: 10,
-        marginLeft: 20,
+        // marginLeft: 20,
     },
     forgot_button: {
         height: 30,

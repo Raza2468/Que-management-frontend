@@ -9,7 +9,7 @@ import Header from "../Header/Header";
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
 
-export default function App() {
+export default function Franchise() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     return (
@@ -23,7 +23,7 @@ export default function App() {
                 end={{ x: 1, y: 0.5 }}
             >
 
-                <Header ScreenName="Sign IN"/>
+                <Header ScreenName="Franchise"/>
                 <ScrollView >
                     <View style={{
                         justifyContent: "center",
@@ -44,7 +44,7 @@ export default function App() {
                             <View style={styles.inputView}>
                                 <TextInput
                                     style={styles.TextInput}
-                                    placeholder="Cell."
+                                    placeholder="Contact"
                                     placeholderTextColor="#003f5c"
                                     onChangeText={(email) => setEmail(email)}
                                 />
@@ -52,17 +52,14 @@ export default function App() {
                             <View style={styles.inputView}>
                                 <TextInput
                                     style={styles.TextInput}
-                                    placeholder="Password."
+                                    placeholder="Location."
                                     placeholderTextColor="#003f5c"
                                     secureTextEntry={true}
                                     onChangeText={(password) => setPassword(password)}
                                 />
                             </View>
-                            <TouchableOpacity>
-                                <Text style={styles.forgot_button}>Forgot Password?</Text>
-                            </TouchableOpacity>
                             <TouchableOpacity style={styles.loginBtn}>
-                                <Text style={{ fontSize: 30, color: "white" }}>Next</Text>
+                                <Text style={{ fontSize: 30,color:"white" }}>Next</Text>
                             </TouchableOpacity>
                         </View>
                     </View>
@@ -102,8 +99,8 @@ const styles = StyleSheet.create({
     TextInput: {
         flex: 1,
         height: 50,
-        fontSize: 22,
         padding: 10,
+        fontSize: 22
         // marginLeft: 20,
     },
     forgot_button: {
@@ -118,5 +115,6 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         // marginTop: 40,
         backgroundColor: "#00CBA0",
+
     },
 });

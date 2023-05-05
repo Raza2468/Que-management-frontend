@@ -12,17 +12,26 @@ import SignIn from './src/SignIn/SignIn';
 import SignUP from './src/SignUP/SignUP';
 import List from './src/List/List';
 import UserHome from './src/UserHome/UserHome';
+import AdminHome from './src/AdminHome/AdminHome';
+import Dashboard from './src/Dashboard/Dashboard';
+import ManagerHome from './src/ManagerHome/ManagerHome';
+import Registration from './src/Registration/Registration';
+import Franchise from './src/Franchise/Franchise';
 
 // import Header from './src/Header/Header';
 
 function App() {
   return (
     <>
-    <UserHome />
-    {/* <SignIn /> */}
-    {/* <SignUP /> */}
-    {/* <List /> */}
-    
+      <SignIn />
+      {/* <SignUP /> */}
+      {/* <Dashboard /> */}
+      {/* <ManagerHome /> */}
+      {/* <AdminHome /> */}
+      {/* <UserHome /> */}
+      {/* <List /> */}
+      {/* <Franchise /> */}
+      {/* <Registration /> */}
     </>
   );
 }
