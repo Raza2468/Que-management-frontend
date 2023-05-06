@@ -8,10 +8,14 @@ import Header from "../Header/Header";
 
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
+import { useNavigation } from '@react-navigation/native';
+
 
 export default function SignUP() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const navigation = useNavigation();
+
     return (
 
         <>
@@ -75,7 +79,7 @@ export default function SignUP() {
                             <TouchableOpacity>
                                 {/* <Text style={styles.forgot_button}>Forgot Password?</Text> */}
                             </TouchableOpacity>
-                            <TouchableOpacity style={styles.loginBtn}>
+                            <TouchableOpacity style={styles.loginBtn} onPress={() => navigation.navigate('SignIn')}>
                             <Text style={{ fontSize: 30,color:"white" }}>Next</Text>
                             </TouchableOpacity>
                         </View>

@@ -8,11 +8,14 @@ import franchise from '../../assets/AdminHome/franchise.png';
 import addUser from '../../assets/AdminHome/addUser.png';
 import appointment from '../../assets/AdminHome/appointment.png';
 import manager2 from '../../assets/AdminHome/manager2.png';
-
+import { useNavigation } from '@react-navigation/native';
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
 
 export default function AdminHome() {
+
+    const navigation = useNavigation();
+
     return (
 
         <>
@@ -29,27 +32,35 @@ export default function AdminHome() {
 
                         <View style={styles.container}>
                             <Image source={franchise} style={{ width: "28%", height: windowHeight / 8 }} />
-                            <View style={styles.numberBox}>
-                                <Text style={{ fontSize: 22, color: "red", textAlign: "center", }}>Create franchies</Text>
-                            </View>
+                            <TouchableOpacity onPress={() => navigation.navigate('ManagerHome')}>
+                                <View style={styles.numberBox}>
+                                    <Text style={{ fontSize: 22, color: "red", textAlign: "center", }}>Create franchies</Text>
+                                </View>
+                            </TouchableOpacity>
                         </View>
                         <View style={styles.container}>
                             <Image source={addUser} style={{ width: "28%", height: windowHeight / 8 }} />
-                            <View style={styles.numberBox}>
-                                <Text style={{ fontSize: 22, color: "red", textAlign: "center", }}>Add Manager</Text>
-                            </View>
+                            <TouchableOpacity onPress={() => navigation.navigate('ManagerHome')}>
+                                <View style={styles.numberBox}>
+                                    <Text style={{ fontSize: 22, color: "red", textAlign: "center", }}>Add Manager</Text>
+                                </View>
+                            </TouchableOpacity>
                         </View>
                         <View style={styles.container}>
                             <Image source={manager2} style={{ width: "28%", height: windowHeight / 8 }} />
-                            <View style={styles.numberBox}>
-                                <Text style={{ fontSize: 22, color: "red", textAlign: "center", }}>Assign Manager</Text>
-                            </View>
+                            <TouchableOpacity onPress={() => navigation.navigate('ManagerHome')}>
+                                <View style={styles.numberBox}>
+                                    <Text style={{ fontSize: 22, color: "red", textAlign: "center", }}>Assign Manager</Text>
+                                </View>
+                            </TouchableOpacity>
                         </View>
                         <View style={styles.container}>
                             <Image source={appointment} style={{ width: "28%", height: windowHeight / 8 }} />
-                            <View style={styles.numberBox}>
-                                <Text style={{ fontSize: 22, color: "red", textAlign: "center", }}>List Of Franchies</Text>
-                            </View>
+                            <TouchableOpacity onPress={() => navigation.navigate('ManagerHome')}>
+                                <View style={styles.numberBox}>
+                                    <Text style={{ fontSize: 22, color: "red", textAlign: "center", }}>List Of Franchies</Text>
+                                </View>
+                            </TouchableOpacity>
                         </View>
                         <View style={styles.container}></View>
                     </View>
@@ -87,7 +98,7 @@ const styles = StyleSheet.create({
         // margin: 10,
         marginTop: windowHeight / 24,
         alignItems: "center",
-        justifyContent: "center", 
+        justifyContent: "center",
         borderColor: "#1D7874",
         borderWidth: 4,
         // alignItems:"flex-end"

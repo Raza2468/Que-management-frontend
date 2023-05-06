@@ -4,12 +4,15 @@ import {
 } from "react-native";
 import LinearGradient from 'react-native-linear-gradient'
 import Header from "../Header/Header";
-
+import { useNavigation } from '@react-navigation/native';
 
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
 
 export default function List() {
+
+    const navigation = useNavigation();
+
     return (
 
         <>
@@ -23,7 +26,7 @@ export default function List() {
 
                 <Header />
                 <ScrollView>
-                    <View style={{marginTop: windowHeight/5.6 }}>
+                    <View style={{ marginTop: windowHeight / 5.6 }}>
                         <View style={{ flex: 1, flexDirection: "row", justifyContent: "space-around" }}>
                             <View style={styles.twoNumberBox}>
                                 <Text style={{ fontSize: 25, color: "red", textAlign: "center", marginTop: 10 }}>04</Text>
@@ -33,21 +36,72 @@ export default function List() {
                             </View>
                         </View>
 
-                        <View style={styles.container}>
-                            <Text style={{ fontSize: 25, color: "white" }}>Ahmed Raza</Text>
-                            <View style={{ flex: 1, flexDirection: "row", justifyContent: "flex-end" }}>
-                                <View style={styles.numberBox}>
-                                    <Text style={{ fontSize: 25, color: "red", textAlign: "center", marginTop: 10 }}>04</Text>
-                                </View>
-                                <View style={styles.numberBox}>
-                                    <Text style={{ fontSize: 25, color: "red", textAlign: "center", marginTop: 10 }}>05</Text>
+                        <TouchableOpacity onPress={() => navigation.navigate('Dashboard')}>
+                            <View style={styles.container}>
+                                <Text style={{ fontSize: 25, color: "white" }}>Ahmed Raza</Text>
+                                <View style={{ flex: 1, flexDirection: "row", justifyContent: "flex-end" }}>
+                                    <View style={styles.numberBox}>
+                                        <Text style={{ fontSize: 25, color: "red", textAlign: "center", marginTop: 10 }}>04</Text>
+                                    </View>
+                                    <View style={styles.numberBox}>
+                                        <Text style={{ fontSize: 25, color: "red", textAlign: "center", marginTop: 10 }}>05</Text>
+                                    </View>
                                 </View>
                             </View>
-                        </View>
-                        <View style={styles.container}></View>
-                        <View style={styles.container}></View>
-                        <View style={styles.container}></View>
-                        <View style={styles.container}></View>
+                        </TouchableOpacity>
+
+                        <TouchableOpacity onPress={() => navigation.navigate('Dashboard')}>
+                            <View style={styles.container}>
+                                <Text style={{ fontSize: 25, color: "white" }}>Ahmed Raza</Text>
+                                <View style={{ flex: 1, flexDirection: "row", justifyContent: "flex-end" }}>
+                                    <View style={styles.numberBox}>
+                                        <Text style={{ fontSize: 25, color: "red", textAlign: "center", marginTop: 10 }}>04</Text>
+                                    </View>
+                                    <View style={styles.numberBox}>
+                                        <Text style={{ fontSize: 25, color: "red", textAlign: "center", marginTop: 10 }}>05</Text>
+                                    </View>
+                                </View>
+                            </View>
+                        </TouchableOpacity>
+                        <TouchableOpacity onPress={() => navigation.navigate('Dashboard')}>
+                            <View style={styles.container}>
+                                <Text style={{ fontSize: 25, color: "white" }}>Ahmed Raza</Text>
+                                <View style={{ flex: 1, flexDirection: "row", justifyContent: "flex-end" }}>
+                                    <View style={styles.numberBox}>
+                                        <Text style={{ fontSize: 25, color: "red", textAlign: "center", marginTop: 10 }}>04</Text>
+                                    </View>
+                                    <View style={styles.numberBox}>
+                                        <Text style={{ fontSize: 25, color: "red", textAlign: "center", marginTop: 10 }}>05</Text>
+                                    </View>
+                                </View>
+                            </View>
+                        </TouchableOpacity>
+                        <TouchableOpacity onPress={() => navigation.navigate('Dashboard')}>
+                            <View style={styles.container}>
+                                <Text style={{ fontSize: 25, color: "white" }}>Ahmed Raza</Text>
+                                <View style={{ flex: 1, flexDirection: "row", justifyContent: "flex-end" }}>
+                                    <View style={styles.numberBox}>
+                                        <Text style={{ fontSize: 25, color: "red", textAlign: "center", marginTop: 10 }}>04</Text>
+                                    </View>
+                                    <View style={styles.numberBox}>
+                                        <Text style={{ fontSize: 25, color: "red", textAlign: "center", marginTop: 10 }}>05</Text>
+                                    </View>
+                                </View>
+                            </View>
+                        </TouchableOpacity>
+                        <TouchableOpacity onPress={() => navigation.navigate('Dashboard')}>
+                            <View style={styles.container}>
+                                <Text style={{ fontSize: 25, color: "white" }}>Ahmed Raza</Text>
+                                <View style={{ flex: 1, flexDirection: "row", justifyContent: "flex-end" }}>
+                                    <View style={styles.numberBox}>
+                                        <Text style={{ fontSize: 25, color: "red", textAlign: "center", marginTop: 10 }}>04</Text>
+                                    </View>
+                                    <View style={styles.numberBox}>
+                                        <Text style={{ fontSize: 25, color: "red", textAlign: "center", marginTop: 10 }}>05</Text>
+                                    </View>
+                                </View>
+                            </View>
+                        </TouchableOpacity>
                         <View style={styles.container}></View>
                         <View style={styles.container}></View>
                         <View style={styles.container}></View>

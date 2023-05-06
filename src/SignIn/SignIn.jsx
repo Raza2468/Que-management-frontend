@@ -4,7 +4,7 @@ import {
 } from "react-native";
 import LinearGradient from 'react-native-linear-gradient'
 import Header from "../Header/Header";
-
+import { useNavigation } from '@react-navigation/native';
 
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
@@ -12,6 +12,8 @@ const windowHeight = Dimensions.get('window').height;
 export default function App() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const navigation = useNavigation();
+
     return (
 
         <>
@@ -23,7 +25,7 @@ export default function App() {
                 end={{ x: 1, y: 0.5 }}
             >
 
-                <Header ScreenName="Sign IN"/>
+                <Header ScreenName="Sign IN" />
                 <ScrollView >
                     <View style={{
                         justifyContent: "center",
@@ -61,7 +63,7 @@ export default function App() {
                             <TouchableOpacity>
                                 <Text style={styles.forgot_button}>Forgot Password?</Text>
                             </TouchableOpacity>
-                            <TouchableOpacity style={styles.loginBtn}>
+                            <TouchableOpacity style={styles.loginBtn} onPress={() => navigation.navigate('AdminHome')}>
                                 <Text style={{ fontSize: 30, color: "white" }}>Next</Text>
                             </TouchableOpacity>
                         </View>

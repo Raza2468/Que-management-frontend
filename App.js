@@ -1,4 +1,5 @@
-import React from 'react';
+import React, {useState} from 'react';
+import { NavigationContainer } from '@react-navigation/native';
 import {
   SafeAreaView,
   ScrollView,
@@ -9,22 +10,25 @@ import {
   View,
 } from 'react-native';
 import SignIn from './src/SignIn/SignIn';
-import SignUP from './src/SignUP/SignUP';
-import List from './src/List/List';
-import UserHome from './src/UserHome/UserHome';
-import AdminHome from './src/AdminHome/AdminHome';
-import Dashboard from './src/Dashboard/Dashboard';
-import ManagerHome from './src/ManagerHome/ManagerHome';
-import Registration from './src/Registration/Registration';
-import Franchise from './src/Franchise/Franchise';
+import AuthNavigator from './src/AuthNavigation';
+// import SignUP from './src/SignUP/SignUP';
+// import List from './src/List/List';
+// import UserHome from './src/UserHome/UserHome';
+// import AdminHome from './src/AdminHome/AdminHome';
+// import Dashboard from './src/Dashboard/Dashboard';
+// import ManagerHome from './src/ManagerHome/ManagerHome';
+// import Registration from './src/Registration/Registration';
+// import Franchise from './src/Franchise/Franchise';
+
+
 
 // import Header from './src/Header/Header';
 
 function App() {
   return (
-    <>
-      <SignIn />
-      {/* <SignUP /> */}
+    <NavigationContainer options={{headerShown: false}}>
+      <AuthNavigator />
+      {/* <SignIn /> */}
       {/* <Dashboard /> */}
       {/* <ManagerHome /> */}
       {/* <AdminHome /> */}
@@ -32,7 +36,7 @@ function App() {
       {/* <List /> */}
       {/* <Franchise /> */}
       {/* <Registration /> */}
-    </>
+    </NavigationContainer>
   );
 }
 

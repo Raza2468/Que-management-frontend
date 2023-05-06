@@ -8,11 +8,15 @@ import appointment from '../../assets/MangerHome/appointment.png';
 import franchise from '../../assets/MangerHome/franchise.png';
 import ticke from '../../assets/MangerHome/ticke.png';
 import summary from '../../assets/MangerHome/summary.png';
-
+import { useNavigation } from '@react-navigation/native';
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
 
 export default function ManagerHome() {
+
+    const navigation = useNavigation();
+
+
     return (
 
         <>
@@ -47,27 +51,35 @@ export default function ManagerHome() {
 
                         <View style={styles.container}>
                             <Image source={appointment} style={{ width: "28%", height: windowHeight / 8 }} />
-                            <View style={styles.numberBox}>
-                                <Text style={{ fontSize: 22, color: "red", textAlign: "center", }}>Appointment List</Text>
-                            </View>
+                            <TouchableOpacity onPress={() => navigation.navigate('List')}>
+                                <View style={styles.numberBox}>
+                                    <Text style={{ fontSize: 22, color: "red", textAlign: "center", }}>Appointment List</Text>
+                                </View>
+                            </TouchableOpacity>
                         </View>
                         <View style={styles.container}>
                             <Image source={franchise} style={{ width: "28%", height: windowHeight / 8 }} />
-                            <View style={styles.numberBox}>
-                                <Text style={{ fontSize: 22, color: "red", textAlign: "center", }}>Select Franchise</Text>
-                            </View>
+                            <TouchableOpacity onPress={() => navigation.navigate('List')}>
+                                <View style={styles.numberBox}>
+                                    <Text style={{ fontSize: 22, color: "red", textAlign: "center", }}>Select Franchise</Text>
+                                </View>
+                            </TouchableOpacity>
                         </View>
                         <View style={styles.container}>
                             <Image source={ticke} style={{ width: "28%", height: windowHeight / 8 }} />
-                            <View style={styles.numberBox}>
-                                <Text style={{ fontSize: 22, color: "red", textAlign: "center", }}>Issue Ticket</Text>
-                            </View>
+                            <TouchableOpacity onPress={() => navigation.navigate('List')}>
+                                <View style={styles.numberBox}>
+                                    <Text style={{ fontSize: 22, color: "red", textAlign: "center", }}>Issue Ticket</Text>
+                                </View>
+                            </TouchableOpacity>
                         </View>
                         <View style={styles.container}>
                             <Image source={summary} style={{ width: "28%", height: windowHeight / 8 }} />
-                            <View style={styles.numberBox}>
-                                <Text style={{ fontSize: 22, color: "red", textAlign: "center", }}>Summary</Text>
-                            </View>
+                            <TouchableOpacity onPress={() => navigation.navigate('List')}>
+                                <View style={styles.numberBox}>
+                                    <Text style={{ fontSize: 22, color: "red", textAlign: "center", }}>Summary</Text>
+                                </View>
+                            </TouchableOpacity>
                         </View>
                         <View style={styles.container}></View>
                     </View>
